@@ -14,6 +14,54 @@ import static org.yzh.protocol.JT808Beans.*;
  */
 public class JT808BeansTest {
 
+    /**
+     * 终端注册单元测试
+     */
+    @Test
+    public void testT0100() {
+        selfCheck(H2013(T0100()));
+        selfCheck(H2019(T0100()));
+    }
+
+    /**
+     * 终端鉴权单元测试
+     */
+    @Test
+    public void testT0102() {
+        selfCheck(H2013(T0102_2013()));
+        selfCheck(H2019(T0102_2019()));
+    }
+
+    /**
+     * 终端鉴权单元测试
+     */
+    @Test
+    public void testT0002() {
+        JTMessage message = new JTMessage();
+        message.setMessageId(JT808.终端心跳);
+        selfCheck(H2013(message));
+        selfCheck(H2019(message));
+    }
+
+    /**
+     * 终端通用应答|平台通用应答单元测试
+     */
+    @Test
+    public void testT0001() {
+        selfCheck(H2013(T0001()));
+        selfCheck(H2019(T0001()));
+    }
+
+    /**
+     * 位置信息汇报单元测试
+     */
+    @Test
+    public void testT0200() {
+        selfCheck(H2013(T0200Attributes()));
+        selfCheck(H2019(T0200Attributes()));
+    }
+
+
     @Test
     public void testT8303() {
         selfCheck(H2013(T8303()));
@@ -44,25 +92,6 @@ public class JT808BeansTest {
         selfCheck(H2019(T8103()));
     }
 
-    @Test
-    public void testT0001() {
-        selfCheck(H2013(T0001()));
-        selfCheck(H2019(T0001()));
-    }
-
-    @Test
-    public void testT0002() {
-        JTMessage message = new JTMessage();
-        message.setMessageId(JT808.终端心跳);
-        selfCheck(H2013(message));
-        selfCheck(H2019(message));
-    }
-
-    @Test
-    public void testT0200() {
-        selfCheck(H2013(T0200Attributes()));
-        selfCheck(H2019(T0200Attributes()));
-    }
 
     @Test
     public void testT0200JSATL12() {
@@ -106,14 +135,6 @@ public class JT808BeansTest {
         selfCheck(H2019(T8108()));
     }
 
-    /**
-     * 终端注册单元测试
-     */
-    @Test
-    public void testT0100() {
-        selfCheck(H2013(T0100()));
-        selfCheck(H2019(T0100()));
-    }
 
     @Test
     public void testT0303() {
@@ -185,12 +206,6 @@ public class JT808BeansTest {
     public void testT0104() {
         selfCheck(H2013(T0104()));
         selfCheck(H2019(T0104()));
-    }
-
-    @Test
-    public void testT0102() {
-        selfCheck(H2013(T0102_2013()));
-        selfCheck(H2019(T0102_2019()));
     }
 
     @Test

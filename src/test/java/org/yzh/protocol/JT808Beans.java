@@ -40,7 +40,7 @@ public class JT808Beans {
     public static <T extends JTMessage> T H2013(T message) {
         int messageId = message.reflectMessageId();
         if (messageId != 0) message.setMessageId(messageId);
-        message.setClientId("123456789012");
+        message.setClientId("192180672113");
         message.setSerialNo(Short.MAX_VALUE);
         message.setEncryption(0);
         message.setReserved(false);
@@ -79,7 +79,7 @@ public class JT808Beans {
         return bean;
     }
 
-    //终端注册
+    // 终端注册
     public static T0100 T0100() {
         T0100 bean = new T0100();
         bean.setProvinceId(31);
@@ -92,7 +92,7 @@ public class JT808Beans {
         return bean;
     }
 
-    //终端鉴权
+    // 终端鉴权
     public static T0102 T0102_2013() {
         T0102 bean = new T0102();
         bean.setToken("pmYGzGukO8K4Z5lpIOTg8dqb3eprYaHBbXSPLtdbyG8=");
@@ -197,7 +197,7 @@ public class JT808Beans {
         attributes.put(AttributeKey.Speed, 33);
         attributes.put(AttributeKey.AlarmEventId, 44);
         attributes.put(AttributeKey.TirePressure, new TirePressure(new byte[]{55, 55, 55}));
-        attributes.put(AttributeKey.CarriageTemperature, 2);
+        attributes.put(AttributeKey.CarriageTemperature, 22);
 
         attributes.put(AttributeKey.OverSpeedAlarm, new OverSpeedAlarm((byte) 66, 66));
         attributes.put(AttributeKey.InOutAreaAlarm, new InOutAreaAlarm((byte) 77, 77, (byte) 77));

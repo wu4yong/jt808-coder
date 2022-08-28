@@ -106,6 +106,9 @@ public class JT808BeansTest {
         selfCheck(H2019(T8108()));
     }
 
+    /**
+     * 终端注册单元测试
+     */
     @Test
     public void testT0100() {
         selfCheck(H2013(T0100()));

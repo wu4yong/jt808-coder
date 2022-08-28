@@ -28,13 +28,15 @@ import java.util.TreeMap;
 public class JT808Beans {
 
     public static final String ALARM_NO = "ad72131579e54be0b0f737cfc72c5db8";
-    public static final String DEVICE_ID = "09876543210987654321";
-    public static final String STR_TIME = "200707192359";
-    public static final LocalDateTime TIME = LocalDateTime.of(2020, 7, 7, 19, 23, 59);
-    public static final LocalDateTime START_TIME = LocalDateTime.of(2020, 7, 26, 0, 0, 0);
-    public static final LocalDateTime END_TIME = LocalDateTime.of(2020, 7, 26, 23, 23, 59);
+    public static final String DEVICE_ID = "88060";
+    private static final String STR_TIME = "202208011200";
+    private static final LocalDateTime TIME = LocalDateTime.of(2022, 8, 28, 10, 00, 00);
+    private static final LocalDateTime START_TIME = LocalDateTime.of(2022, 8, 28, 10, 00, 00);
+    private static final LocalDateTime END_TIME = LocalDateTime.of(2022, 8, 28, 10, 00, 00);
 
-    /** 2013版消息头 */
+    /**
+     * 2013版消息头
+     */
     public static <T extends JTMessage> T H2013(T message) {
         int messageId = message.reflectMessageId();
         if (messageId != 0) message.setMessageId(messageId);
@@ -45,7 +47,9 @@ public class JT808Beans {
         return message;
     }
 
-    /** 2019版消息头 */
+    /**
+     * 2019版消息头
+     */
     public static <T extends JTMessage> T H2019(T message) {
         int messageId = message.reflectMessageId();
         if (messageId != 0) message.setMessageId(messageId);
@@ -80,11 +84,11 @@ public class JT808Beans {
         T0100 bean = new T0100();
         bean.setProvinceId(31);
         bean.setCityId(115);
-        bean.setMakerId("yzh");
-        bean.setDeviceModel("www.jtt808.cn");
+        bean.setMakerId("wbtech");
+        bean.setDeviceModel("WBT-V82");
         bean.setDeviceId(DEVICE_ID);
-        bean.setPlateColor(1);
-        bean.setPlateNo("测A888888");
+        bean.setPlateColor(1); // 蓝色
+        bean.setPlateNo("粤A99999");
         return bean;
     }
 
